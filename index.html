@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ghost Search Camera（ゴーストサーチカメラ）— BONSAI PROJECT</title>
+  <title>Ghost Search Camera（ゴーストサーチカメラ）公式 — 盆栽企画 BONSAI PROJECT</title>
+
+  <!-- 1. 基本SEO・クローラー制御 -->
+  <meta name="description" content="ゴーストサーチカメラ（Ghost Search Camera）公式ページ。カメラ映像の輝度分散やエッジ勾配を独自アルゴリズムでリアルタイム解析し、空間の微細なノイズ（異常値）を可視化するサイバー・オカルト調ジョークカメラアプリ。An experimental occult joke camera app with real-time image noise analysis by BONSAI PROJECT.">
+  <meta name="keywords" content="Ghost Search Camera,ゴーストサーチカメラ,盆栽企画,BONSAI PROJECT,ジョークアプリ,オカルトカメラ,ノイズ解析,九字切り,Kuji-Kiri,Androidアプリ">
+  <meta name="author" content="BONSAI PROJECT (盆栽企画)">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#000000">
+
+  <!-- 2. 正規URL・多言語アノテーション -->
+  <link rel="canonical" href="https://mizotan.github.io/ghostsearchcamera/">
+  <link rel="alternate" hreflang="ja" href="https://mizotan.github.io/ghostsearchcamera/">
+  <link rel="alternate" hreflang="en" href="https://mizotan.github.io/ghostsearchcamera/">
+  <link rel="alternate" hreflang="x-default" href="https://mizotan.github.io/ghostsearchcamera/">
+
+  <!-- 3. ファビコン（Google検索結果一覧のアイコン表示用） -->
+  <link rel="icon" type="image/png" href="ghost.png">
+  <link rel="apple-touch-icon" href="ghost.png">
+
+  <!-- 4. OGP (Open Graph Protocol) / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BONSAI PROJECT — 盆栽企画">
+  <meta property="og:title" content="Ghost Search Camera（ゴーストサーチカメラ）— BONSAI PROJECT">
+  <meta property="og:description" content="独自アルゴリズムで空間ノイズをリアルタイム解析するサイバー・オカルト調ジョークカメラアプリ。解析はガチ、結論はジョーク。">
+  <meta property="og:url" content="https://mizotan.github.io/ghostsearchcamera/">
+  <meta property="og:image" content="https://mizotan.github.io/ghostsearchcamera/ghost.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ghost Search Camera（ゴーストサーチカメラ）— BONSAI PROJECT">
+  <meta name="twitter:description" content="空間ノイズをリアルタイム解析するサイバー・オカルト調ジョークカメラアプリ。">
+  <meta name="twitter:image" content="https://mizotan.github.io/ghostsearchcamera/ghost.png">
+
+  <!-- 5. 構造化データ (JSON-LD / Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Ghost Search Camera",
+    "alternateName": "ゴーストサーチカメラ",
+    "url": "https://mizotan.github.io/ghostsearchcamera/",
+    "image": "https://mizotan.github.io/ghostsearchcamera/ghost.png",
+    "applicationCategory": "EntertainmentApplication",
+    "operatingSystem": "Android",
+    "description": "カメラ映像の輝度分散やエッジ勾配を独自アルゴリズムでリアルタイム解析し、空間の微細なノイズ（異常値）を可視化するオカルト・ジョークカメラアプリ。",
+    "inLanguage": ["ja", "en"],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "BONSAI PROJECT",
+      "alternateName": "盆栽企画",
+      "url": "https://mizotan.github.io/bonsaiproject/",
+      "logo": "https://mizotan.github.io/ghostsearchcamera/rogo.png",
+      "email": "bonsai.project.2026@gmail.com"
+    }
+  }
+  </script>
+
   <style>
     * {
       box-sizing: border-box;
@@ -313,6 +374,11 @@
       object-fit: contain;
       border-radius: 4px;
       box-shadow: 0 0 10px rgba(0, 255, 0, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .studio-logo:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 16px rgba(0, 255, 0, 0.35);
     }
     .contact-info {
       font-size: 13px;
@@ -364,11 +430,11 @@
   </style>
 </head>
 <body>
-  <div class="wrap">
+  <main class="wrap">
 
     <!-- アプリヘッダー＆メインアイコン -->
     <header class="app-header">
-      <img src="ghost.png" alt="Ghost Search Camera Icon" class="app-icon">
+      <img src="ghost.png" alt="Ghost Search Camera（ゴーストサーチカメラ）アプリアイコン" width="120" height="120" class="app-icon">
       <h1 class="app-title">Ghost Search Camera</h1>
       <p class="app-subtitle">ゴーストサーチカメラ — Real-Time Noise Analyzer &amp; Occult Joke App</p>
       <div>
@@ -397,25 +463,25 @@
     </header>
 
     <!-- 最新情報（UPDATES）：今後のHP更新はここへの追記だけで完結します -->
-    <section id="updates">
-      <h2>LATEST UPDATES / 最新情報</h2>
+    <section id="updates" aria-labelledby="heading-updates">
+      <h2 id="heading-updates">LATEST UPDATES / 最新情報</h2>
       <div class="news-box">
         <ul class="news-list">
 
           <!-- ▼ 新しい情報を追加する際は、この <li>〜</li> をコピーして一番上に貼り付けてください ▼ -->
           <li>
-            <span class="news-date">2026/10/XX</span>
+            <span class="news-date">2026/10</span>
             姉妹アプリ「ハロウィンくじ (Halloween lucky draw)」公開
             <a class="inline-link" href="https://mizotan.github.io/halloweenluckydraw/">HP →</a>
             <!-- アプリストア公開時は下のリンクの href を書き換えてコメント解除 -->
             <!-- <a class="inline-link" href="https://play.google.com/store/apps/details?id=パッケージ名">App →</a> -->
-            <span class="news-sub-en">Sister app "Halloween lucky draw" official page launched.</span>
+            <span class="news-sub-en" lang="en">Sister app "Halloween lucky draw" official page launched.</span>
           </li>
 
           <li>
-            <span class="news-date">2026/10/XX</span>
+            <span class="news-date">2026/10</span>
             「ゴーストサーチカメラ (Ghost Search Camera)」公式ページ公開（Google Play 近日公開予定）
-            <span class="news-sub-en">Ghost Search Camera official page opened. (Google Play release coming soon)</span>
+            <span class="news-sub-en" lang="en">Ghost Search Camera official page opened. (Google Play release coming soon)</span>
           </li>
 
         </ul>
@@ -423,23 +489,23 @@
     </section>
 
     <!-- コンセプト・概要 -->
-    <section id="concept">
-      <h2>CONCEPT / 概要</h2>
+    <section id="concept" aria-labelledby="heading-concept">
+      <h2 id="heading-concept">CONCEPT / 概要</h2>
       <p class="text-ja">
         あらかじめ用意された幽霊のイラストを合成したり、ランダムな位置にデタラメな枠を表示したりするアプリではありません。本アプリは、カメラが捉えた空間の「輝度分散」や「エッジ勾配」を独自アルゴリズムでリアルタイムに解析し、風景の中に潜む微細なノイズの塊（異常値）を真面目に検出して可視化します。<br>
         ……とはいえ、その反応が「幽霊」だとは一言も断言していません。あくまでジョークアプリです。解析自体はガチでやっていますが。
       </p>
-      <p class="text-en">
+      <p class="text-en" lang="en">
         This app does not paste pre-made ghost graphics or pop up fake boxes at random coordinates. Instead, it runs a custom real-time algorithm analyzing luminance variance and edge gradients from your camera sensor to genuinely lock onto subtle clusters of visual anomalies.<br>
         ...That said, we never claim what it detects is actually a "ghost." It's just a joke app. Though the image analysis itself is dead serious.
       </p>
     </section>
 
     <!-- 主な機能 -->
-    <section id="features">
-      <h2>SYSTEM FEATURES / 主な機能</h2>
+    <section id="features" aria-labelledby="heading-features">
+      <h2 id="heading-features">SYSTEM FEATURES / 主な機能</h2>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h3>
           01. Anomaly Detection Camera
           <span class="tag-mini">Manual / Auto</span>
@@ -447,12 +513,12 @@
         <p class="text-ja">
           はっきりした輪郭を持つ日常の物体でもなく、単なる平坦な暗闇でもない——独自の閾値帯（Creepy Zone）に収まる「曖昧な空間のゆらぎ」だけを計算して黄色いターゲット枠でロックオンします。任意のタイミングで撮影できる「Manual」と、異常値の塊を捉えた瞬間に自動シャッターを切る「Auto」を搭載。そこに何が写っているかは、あなたの目でご確認ください。
         </p>
-        <p class="text-en">
+        <p class="text-en" lang="en">
           Filters out clear everyday objects and flat darkness, locking exclusively onto ambiguous fluctuations within a specific threshold ("Creepy Zone"). Choose "Manual" capture or "Auto" mode, which automatically triggers the shutter when an anomaly cluster is detected.
         </p>
-      </div>
+      </article>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h3>
           02. Tactical Video Recording
           <span class="tag-mini">30s / 60s &amp; Audio</span>
@@ -460,12 +526,12 @@
         <p class="text-ja">
           リアルタイム解析によるターゲット枠の挙動やテレメトリー数値（座標・確信度スコア・処理時間）を含めたモニター画面を、そのまま動画として記録する録画モード（30秒 / 60秒）。マイク音声録音のON/OFFにも対応しています。
         </p>
-        <p class="text-en">
+        <p class="text-en" lang="en">
           Record 30-second or 60-second video clips directly from the live analysis canvas, complete with real-time telemetry data (coordinates, confidence scores, delta time) and optional microphone audio.
         </p>
-      </div>
+      </article>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h3>
           03. Evidence Gallery
           <span class="tag-mini">In-App &amp; Camera Roll</span>
@@ -473,12 +539,12 @@
         <p class="text-ja">
           撮影した静止画（最大50件）や動画（最大3件）はアプリ内の「証拠資料ギャラリー」へ一時保存されます（異常値検出時は通常画像とターゲット枠付き画像を同時記録）。ピンチ操作での拡大検証や、長押しメニューから端末のカメラロールへの保存が可能です。
         </p>
-        <p class="text-en">
+        <p class="text-en" lang="en">
           Captured photos (up to 50) and videos (up to 3) are stored in the built-in Evidence Gallery (saving both raw and target-marked frames upon anomaly detection). Inspect details with pinch-to-zoom, or long-press to save to your device's camera roll.
         </p>
-      </div>
+      </article>
 
-      <div class="feature-card">
+      <article class="feature-card">
         <h3>
           04. Bonus Feature: Kuji-Kiri Overlay
           <span class="tag-mini">Joke Effect / おまけ演出</span>
@@ -486,7 +552,7 @@
         <p class="text-ja">
           ガチなノイズ解析のお供に、ちょっとしたお遊びギミックとして画面上にサイバー風の格子ラインを描く「九字切り（Ritual Protocol）」エフェクトを収録。不気味な数値が出たときの気休め・デジタルお守り演出としてどうぞ。
         </p>
-        <p class="text-en">
+        <p class="text-en" lang="en">
           Alongside the real-time noise analyzer, a lighthearted digital talisman effect inspired by traditional nine-line grid motifs is included as a bonus visual gag for your late-night explorations.
         </p>
         <div class="kuji-mini-row">
@@ -503,31 +569,31 @@
           </svg>
           <span>Grid Effect: 臨・兵・闘・者・皆・陣・烈・在・前 (Visual Entertainment Effect)</span>
         </div>
-      </div>
+      </article>
     </section>
 
     <!-- 免責事項・ご注意 -->
-    <section id="disclaimer">
-      <h2>DISCLAIMER &amp; NOTES / ご注意・免責事項</h2>
+    <section id="disclaimer" aria-labelledby="heading-disclaimer">
+      <h2 id="heading-disclaimer">DISCLAIMER &amp; NOTES / ご注意・免責事項</h2>
       <div class="spec-box">
         <ul>
           <li>
             <strong>■ 解析結果とジョークアプリの位置づけについて：</strong><br>
             本アプリはカメラセンサーが取得した映像の輝度差やデジタルノイズを独自アルゴリズムでリアルタイム解析していますが、検出された異常値が「幽霊」や「心霊現象」であると断言・保証するものではありません。科学的な画像処理を使ってオカルト探索ごっこを楽しむジョーク・エンターテインメントアプリです。
-            <span class="en">While this app performs genuine real-time mathematical analysis on camera sensor noise and luminance data, it never claims or guarantees that detected anomalies are actual ghosts or paranormal entities. It is a joke entertainment app designed for spooky fun.</span>
+            <span class="en" lang="en">While this app performs genuine real-time mathematical analysis on camera sensor noise and luminance data, it never claims or guarantees that detected anomalies are actual ghosts or paranormal entities. It is a joke entertainment app designed for spooky fun.</span>
           </li>
           <li>
             <strong>■ データの保存上限について：</strong><br>
             アプリ内ギャラリーの保持上限（静止画50件・動画3件）を超えると、古い記録から自動的に上書き消去されます。残しておきたい画像・動画は長押しメニューから端末本体（カメラロール）へ保存してください。
-            <span class="en">In-app gallery storage holds up to 50 photos and 3 videos; older items are automatically overwritten. Long-press important captures to save them permanently to your device.</span>
+            <span class="en" lang="en">In-app gallery storage holds up to 50 photos and 3 videos; older items are automatically overwritten. Long-press important captures to save them permanently to your device.</span>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- 盆栽企画リンク・法務・連絡先 -->
-    <section id="portal">
-      <h2>STUDIO &amp; LEGAL / 企画・サポート</h2>
+    <section id="portal" aria-labelledby="heading-portal">
+      <h2 id="heading-portal">STUDIO &amp; LEGAL / 企画・サポート</h2>
       <ul class="links-list">
         <li>
           <a class="link-btn" href="https://mizotan.github.io/bonsaiproject/">
@@ -543,11 +609,11 @@
 
       <div class="studio-block">
         <a href="https://mizotan.github.io/bonsaiproject/">
-          <img src="rogo.png" alt="盆栽企画 presents" class="studio-logo">
+          <img src="rogo.png" alt="盆栽企画 presents (BONSAI PROJECT)" width="64" height="64" loading="lazy" class="studio-logo">
         </a>
         <div>
           <div style="color: #00FF00; font-size: 13px;">BONSAI PROJECT — 盆栽企画</div>
-          <div style="color: #008800; font-size: 12px;">Experimental App Development &amp; Creative Studio</div>
+          <div style="color: #008800; font-size: 12px;" lang="en">Experimental App Development &amp; Creative Studio</div>
         </div>
       </div>
 
@@ -559,49 +625,49 @@
     </section>
 
     <!-- 多言語サブページリンク用スペース（囲みなし・随時追加可能） -->
-    <div class="lang-space">
+    <nav class="lang-space" aria-label="Language Information Pages">
       <div class="lang-space-label">LANGUAGE PAGES / 多言語インフォメーション:</div>
       <div class="lang-links">
         <!-- ★1Pサブページを作成した言語から順次リンクを有効化・追加してください -->
-        <a href="./ja/ja_information.html">[JA 日本語]</a>
-        <a href="./en/en_information.html">[EN English]</a>
+        <a href="./ja/ja_information.html" hreflang="ja">[JA 日本語]</a>
+        <a href="./en/en_information.html" hreflang="en">[EN English]</a>
 
         <!-- ▼ 今後追加する20言語以上のサブページ用テンプレート（必要なものをコメント解除して使用） ▼ -->
         <!--
-        <a href="./b+es+419/b+es+419_information.html">[ES-419]</a>
-        <a href="./da/da_information.html">[DA]</a>
-        <a href="./de/de_information.html">[DE]</a>
-        <a href="./es/es_information.html">[ES]</a>
-        <a href="./fi/fi_information.html">[FI]</a>
-        <a href="./fr/fr_information.html">[FR]</a>
-        <a href="./hi/hi_information.html">[HI]</a>
-        <a href="./id/id_information.html">[ID]</a>
-        <a href="./it/it_information.html">[IT]</a>
-        <a href="./kk/kk_information.html">[KK]</a>
-        <a href="./mn/mn_information.html">[MN]</a>
-        <a href="./ms/ms_information.html">[MS]</a>
-        <a href="./nl/nl_information.html">[NL]</a>
-        <a href="./no/no_information.html">[NO]</a>
-        <a href="./pl/pl_information.html">[PL]</a>
-        <a href="./pt/pt_information.html">[PT]</a>
-        <a href="./pt-rBR/pt-rBR_information.html">[PT-BR]</a>
-        <a href="./ro/ro_information.html">[RO]</a>
-        <a href="./ru/ru_information.html">[RU]</a>
-        <a href="./sv/sv_information.html">[SV]</a>
-        <a href="./th/th_information.html">[TH]</a>
-        <a href="./tl/tl_information.html">[TL]</a>
-        <a href="./tr/tr_information.html">[TR]</a>
-        <a href="./uk/uk_information.html">[UK]</a>
-        <a href="./vi/vi_information.html">[VI]</a>
+        <a href="./b+es+419/b+es+419_information.html" hreflang="es-419">[ES-419]</a>
+        <a href="./da/da_information.html" hreflang="da">[DA]</a>
+        <a href="./de/de_information.html" hreflang="de">[DE]</a>
+        <a href="./es/es_information.html" hreflang="es">[ES]</a>
+        <a href="./fi/fi_information.html" hreflang="fi">[FI]</a>
+        <a href="./fr/fr_information.html" hreflang="fr">[FR]</a>
+        <a href="./hi/hi_information.html" hreflang="hi">[HI]</a>
+        <a href="./id/id_information.html" hreflang="id">[ID]</a>
+        <a href="./it/it_information.html" hreflang="it">[IT]</a>
+        <a href="./kk/kk_information.html" hreflang="kk">[KK]</a>
+        <a href="./mn/mn_information.html" hreflang="mn">[MN]</a>
+        <a href="./ms/ms_information.html" hreflang="ms">[MS]</a>
+        <a href="./nl/nl_information.html" hreflang="nl">[NL]</a>
+        <a href="./no/no_information.html" hreflang="no">[NO]</a>
+        <a href="./pl/pl_information.html" hreflang="pl">[PL]</a>
+        <a href="./pt/pt_information.html" hreflang="pt">[PT]</a>
+        <a href="./pt-rBR/pt-rBR_information.html" hreflang="pt-BR">[PT-BR]</a>
+        <a href="./ro/ro_information.html" hreflang="ro">[RO]</a>
+        <a href="./ru/ru_information.html" hreflang="ru">[RU]</a>
+        <a href="./sv/sv_information.html" hreflang="sv">[SV]</a>
+        <a href="./th/th_information.html" hreflang="th">[TH]</a>
+        <a href="./tl/tl_information.html" hreflang="tl">[TL]</a>
+        <a href="./tr/tr_information.html" hreflang="tr">[TR]</a>
+        <a href="./uk/uk_information.html" hreflang="uk">[UK]</a>
+        <a href="./vi/vi_information.html" hreflang="vi">[VI]</a>
         -->
       </div>
-    </div>
+    </nav>
 
     <!-- コピーライトフッター -->
     <footer>
       &copy; 2026 BONSAI PROJECT All Rights Reserved.
     </footer>
 
-  </div>
+  </main>
 </body>
 </html>
